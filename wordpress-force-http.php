@@ -2,15 +2,15 @@
 
 /*
  * Plugin Name: WordPress Force HTTP
- * Plugin URI: http://pressable.com
+ * Plugin URI: https://github.com/phikai/wordpress-force-http
  * Description: Forces the front end of your WordPress site to HTTP when you only want the Admin over HTTPS
- * Author: A. Kai Armstrong <code@pressable.com>
+ * Author: A. Kai Armstrong
  * Author URI: http://www.kaiarmstrong.com
- * Version: 0.1
+ * Version: 0.1.1
  * */
 
 #http://yoast.com/wordpress-ssl-setup/
-function pr_force_http () {
+function toz_force_http () {
   if ( is_ssl() && !is_admin() ) {
     if ( 0 === strpos($_SERVER['REQUEST_URI'], 'http') ) {
       wp_redirect(preg_replace('|^https://|', 'http://', $_SERVER['REQUEST_URI']), 301 );
@@ -21,4 +21,4 @@ function pr_force_http () {
     }
   }
 }
-add_action ( 'template_redirect', 'pr_force_http', 1 );
+add_action ( 'template_redirect', 'toz_force_http', 1 );
