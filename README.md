@@ -1,3 +1,6 @@
+**PSA**: Project has moved to [gitlab](https://gitlab.com/phikai/wordpress-force-http). This repo will remain on Github as a mirror.
+---
+
 Branch:  phikai / wordpress-force-http
 Author: A. Kai Armstrong - http://www.kaiarmstrong.com
 Description: Forces the front end of your WordPress site to HTTP when you only want the Admin over HTTPS
