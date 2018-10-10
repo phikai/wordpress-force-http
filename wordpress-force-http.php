@@ -11,7 +11,7 @@ Version: 0.1.3
 
 #http://yoast.com/wordpress-ssl-setup/
 function toz_force_http () {
-  if ( is_ssl() && !is_admin() ) {
+  if ( is_ssl() && !is_admin()&& !is_preview()  ) {
     if ( 0 === strpos($_SERVER['REQUEST_URI'], 'http') ) {
       wp_redirect(preg_replace('|^https://|', 'http://', $_SERVER['REQUEST_URI']), 301 );
       exit();
