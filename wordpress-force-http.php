@@ -6,7 +6,7 @@ Plugin URI: https://github.com/phikai/wordpress-force-http
 Description: Forces the front end of your WordPress site to HTTP when you only want the Admin over HTTPS
 Author: A. Kai Armstrong
 Author URI: http://www.kaiarmstrong.com
-Version: 0.1.4
+Version: 0.1.5
 */
 
 function toz_force_http () {
